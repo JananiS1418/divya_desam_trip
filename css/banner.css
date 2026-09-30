@@ -526,7 +526,8 @@ body {
         /* Avoid Safari width calculation bug */
         width: 100%;
         max-width: 100%;
-        min-width: 0; /* Override the 400px desktop min-width */
+        min-width: 0;
+        /* Override the 400px desktop min-width */
         padding: 5px;
         background: transparent;
         /* No gradient block behind text on mobile */
@@ -536,32 +537,30 @@ body {
     .subtitle-row .subtitle {
         font-size: 0.65rem;
         letter-spacing: 1px;
-        font-weight: 700;
-        color: #0b2e59; /* Navy blue for high contrast against sky */
-        text-shadow: 0 0 4px rgba(255, 255, 255, 1), 0 0 8px rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
     }
 
     .subtitle-row .diamond {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
     }
 
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         line-height: 1;
-        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.9);
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
     }
 
     .trip-text {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
     .description {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
         padding: 0 10px;
         font-weight: 700;
-        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 5px rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
     }
 
     /* 3. Features icons tightly packed side-by-side */
@@ -592,15 +591,11 @@ body {
     .feature-item p {
         font-size: 0.65rem;
         line-height: 1.1;
-        font-weight: 700;
-        color: #ffffff;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(0, 0, 0, 0.9);
     }
 
     .feature-divider {
         height: 25px;
         margin-bottom: 15px;
-        display: block;
     }
 
     /* 4. Bottom bar perfectly sized and floating */
@@ -689,33 +684,44 @@ body {
 @media (max-width: 380px) {
     .banner-overlay-text {
         padding-left: 0;
-        padding-right: 0; 
+        padding-right: 0;
     }
+
     .main-title {
-        font-size: 2.0rem; /* Scaled down to prevent horizontal overflow */
+        font-size: 2.0rem;
+        /* Scaled down to prevent horizontal overflow */
     }
+
     .trip-text {
         font-size: 1.9rem;
     }
+
     .banner-features {
         gap: 1px;
     }
+
     .feature-icon {
         width: 35px;
         height: 35px;
     }
+
     .feature-icon .material-symbols-outlined {
         font-size: 18px;
     }
+
     .feature-item p {
         font-size: 0.55rem;
     }
+
     .banner-bottom-bar {
         padding: 10px 2px;
     }
+
     .bar-section p {
-        font-size: 0.5rem; /* Extremely small text to fit columns without breaking layout */
+        font-size: 0.5rem;
+        /* Extremely small text to fit columns without breaking layout */
     }
+
     .bar-section .location {
         font-size: 0.8rem;
     }
@@ -724,11 +730,15 @@ body {
 /* Specific fix for 425px (Large Mobile width) */
 @media (min-width: 381px) and (max-width: 767px) {
     .banner-overlay-text {
-        top: 3%; /* Keep it high up to avoid the temple below */
+        top: 3%;
+        /* Keep it high up to avoid the temple below */
     }
+
     .main-title {
-        font-size: 2.6rem; /* Restored to a safe size */
+        font-size: 2.6rem;
+        /* Restored to a safe size */
     }
+
     .trip-text {
         font-size: 2.5rem;
     }
