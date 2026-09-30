@@ -536,30 +536,32 @@ body {
     .subtitle-row .subtitle {
         font-size: 0.65rem;
         letter-spacing: 1px;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+        font-weight: 700;
+        color: #0b2e59; /* Navy blue for high contrast against sky */
+        text-shadow: 0 0 4px rgba(255, 255, 255, 1), 0 0 8px rgba(255, 255, 255, 0.8);
     }
 
     .subtitle-row .diamond {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
     }
 
     .main-title {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         line-height: 1;
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.9);
     }
 
     .trip-text {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 
     .description {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
+        font-size: 1rem;
+        margin-bottom: 20px;
         padding: 0 10px;
         font-weight: 700;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 5px rgba(255, 255, 255, 0.8);
     }
 
     /* 3. Features icons tightly packed side-by-side */
@@ -590,11 +592,15 @@ body {
     .feature-item p {
         font-size: 0.65rem;
         line-height: 1.1;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(0, 0, 0, 0.9);
     }
 
     .feature-divider {
         height: 25px;
         margin-bottom: 15px;
+        display: block;
     }
 
     /* 4. Bottom bar perfectly sized and floating */
