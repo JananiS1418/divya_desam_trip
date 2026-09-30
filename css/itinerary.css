@@ -1,0 +1,446 @@
+/* Itinerary Section Styling */
+.itinerary-section {
+    padding: 40px 20px 40px 20px;
+    background-color: #FCF8F0; /* Warm ivory overall background */
+    font-family: 'Georgia', serif;
+}
+
+.itinerary-header.premium-header {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-kicker {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #C58A2A;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.kicker-line {
+    width: 30px;
+    height: 1px;
+    background-color: #C58A2A;
+}
+
+.itinerary-title.premium-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2.8rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.itinerary-title.premium-title span.navy {
+    color: #102B54;
+}
+.itinerary-title.premium-title span.maroon {
+    color: #981E27;
+}
+
+.title-ornament {
+    color: #C58A2A;
+    font-size: 1.5rem;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+.title-ornament.left-arrow {
+    transform: scaleX(1.5);
+    font-family: sans-serif;
+}
+
+.itinerary-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin-top: 5px;
+}
+
+/* Premium Trip Cards Wrapper */
+.itinerary-cards-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* Individual Trip Card Base */
+.trip-itinerary-card {
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--theme-bg);
+}
+
+.theme-maroon {
+    --theme-accent: #991E27;
+    --theme-dark: #7E1720;
+    --theme-bg: #FFF4EF;
+    --theme-row-bg: #FBEDE8;
+    --theme-icon-bg: #F9E6E0;
+    --theme-timeline: #B84B4F;
+    --theme-title: #971E27;
+    --theme-badge-text: #FFFFFF;
+}
+
+.theme-teal {
+    --theme-accent: #006B60;
+    --theme-dark: #00564D;
+    --theme-bg: #F2F8F3;
+    --theme-row-bg: #EAF3EC;
+    --theme-icon-bg: #E1EFE7;
+    --theme-timeline: #34887C;
+    --theme-title: #075E55;
+    --theme-badge-text: #FFFFFF;
+}
+
+.theme-gold {
+    --theme-accent: #A86508;
+    --theme-dark: #87500A;
+    --theme-bg: #FFF7E9;
+    --theme-row-bg: #FAEED9;
+    --theme-icon-bg: #F8E6C7;
+    --theme-timeline: #C18A38;
+    --theme-title: #8B500B;
+    --theme-badge-text: #FFFFFF;
+}
+
+/* Hero Image Top */
+.card-hero-img {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trip-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--theme-dark);
+    color: var(--theme-badge-text);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 5;
+}
+
+.hero-wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Card Content */
+.trip-card-content {
+    padding: 10px 20px 0 20px;
+    text-align: center;
+}
+
+.trip-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.6rem;
+    color: var(--theme-title);
+    margin: 0;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.card-divider-fancy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0 10px 0;
+}
+.card-divider-fancy .line {
+    height: 1px;
+    width: 40px;
+    background-color: #C58A2A;
+}
+.card-divider-fancy .lotus {
+    color: var(--theme-accent);
+    font-size: 1.2rem;
+}
+
+.card-locations {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    color: #102B54;
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.card-locations span.dot {
+    color: var(--theme-accent);
+}
+
+/* Timeline Layout */
+.trip-timeline {
+    position: relative;
+    text-align: left;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 54px 14px 1fr;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 8px;
+    min-height: 72px; /* Uniform height, but much tighter */
+}
+
+.timeline-day-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-day {
+    width: 54px;
+    height: 54px;
+    background-color: var(--theme-dark);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    line-height: 1.1;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.timeline-node-column {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.timeline-node {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--theme-dark);
+    z-index: 2;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    background-color: var(--theme-timeline);
+    z-index: 1;
+}
+
+.timeline-item:first-child .timeline-line {
+    top: 50%;
+}
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+.timeline-content-box {
+    background-color: var(--theme-row-bg);
+    border-radius: 16px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.timeline-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--theme-icon-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--theme-accent);
+    flex-shrink: 0;
+}
+.timeline-icon .material-symbols-outlined {
+    font-size: 1.4rem;
+}
+
+.timeline-text {
+    flex: 1;
+}
+
+.timeline-text h4 {
+    margin: 0 0 4px 0;
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #102B54;
+}
+
+.timeline-text p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    color: #606060;
+    line-height: 1.35;
+}
+
+/* Footer Element */
+.card-footer-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+
+.card-footer-img {
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+.card-footer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+    /* Fade from transparent at top to solid at bottom */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .itinerary-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Center the 3rd card on tablet screens */
+    .trip-itinerary-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 100%;
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 767px) {
+    .itinerary-cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Reset the 3rd card for mobile */
+    .trip-itinerary-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        max-width: 100%;
+    }
+    
+    .itinerary-title.premium-title {
+        font-size: 2rem;
+    }
+}
+
+/* Specific fix for extremely small screens (320px) */
+@media (max-width: 380px) {
+    .itinerary-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .trip-card-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .trip-title {
+        font-size: 1.35rem;
+    }
+    .timeline-item {
+        grid-template-columns: 45px 10px 1fr;
+        gap: 6px;
+    }
+    .timeline-day {
+        width: 45px;
+        height: 45px;
+    }
+    .timeline-day span:first-child {
+        font-size: 0.6rem;
+    }
+    .timeline-day span:last-child {
+        font-size: 0.8rem;
+    }
+    .timeline-item-content {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    .timeline-icon {
+        width: 28px;
+        height: 28px;
+    }
+    .timeline-icon .material-symbols-outlined {
+        font-size: 1.1rem;
+    }
+    .timeline-text h4 {
+        font-size: 0.8rem;
+        word-wrap: break-word; /* Extremely important for long names like Thirukannapuram */
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    .timeline-text p {
+        font-size: 0.7rem;
+    }
+}

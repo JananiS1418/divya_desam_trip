@@ -1,0 +1,355 @@
+/* Final Contact Banner Styling */
+.contact-section {
+    padding: 10px 20px 40px 20px;
+    background-color: #FFF9F2;
+}
+
+.final-contact-banner {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(135deg, #FFFCF7 0%, #FDF1DD 100%);
+    border: 1px solid rgba(197, 138, 42, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(197, 138, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px 20px 15px 20px;
+    z-index: 1;
+}
+
+/* --- Watermarks --- */
+.contact-watermark {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+    opacity: 0.15;
+    background-size: contain;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.left-watermark {
+    left: -20px;
+    bottom: -50px;
+    background-image: url('../C:/Users/Janani/.gemini/antigravity-ide/brain/6c4c9ac9-81d7-409a-b6ae-dc6a4d61f9e3/mandala_sketch_bg_1790757653948.jpg');
+    background-position: left bottom;
+}
+
+.right-watermark {
+    right: -20px;
+    bottom: -50px;
+    background-image: url('../C:/Users/Janani/.gemini/antigravity-ide/brain/6c4c9ac9-81d7-409a-b6ae-dc6a4d61f9e3/mandala_sketch_bg_1790757653948.jpg'); /* Using mandala for both sides to match screenshot */
+    background-position: right bottom;
+    transform: scaleX(-1);
+}
+
+/* --- Border Ornaments --- */
+.border-ornament {
+    position: absolute;
+    color: #C58A2A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-ornament {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFF9F2;
+    padding: 0 10px;
+}
+
+.left-ornament, .right-ornament {
+    top: 50px;
+    width: 40px;
+}
+
+.left-ornament { left: 10px; }
+.right-ornament { right: 10px; }
+
+.line-drop {
+    width: 1px;
+    height: 30px;
+    background-color: #C58A2A;
+    margin-bottom: 5px;
+    opacity: 0.5;
+}
+
+.border-ornament .diamond {
+    font-size: 0.5rem;
+    margin: 3px 0;
+}
+
+.border-ornament .lotus {
+    font-size: 1.8rem;
+    margin: 5px 0;
+}
+
+/* --- Content Wrapper --- */
+.contact-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Header */
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: #A36F17;
+}
+
+.contact-header .line {
+    width: 30px;
+    height: 1px;
+    background-color: #C58A2A;
+    opacity: 0.6;
+}
+
+.contact-header .diamond {
+    font-size: 0.5rem;
+}
+
+.contact-header span:not(.line):not(.diamond) {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Titles */
+.contact-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #102B54;
+    margin: 0 0 5px 0;
+}
+
+.contact-title .maroon {
+    color: #8C1C13;
+}
+
+.contact-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.05rem;
+    color: #555;
+    margin: 0 0 15px 0;
+}
+
+.contact-divider-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0 15px 0;
+    color: #C58A2A;
+}
+
+.contact-divider-horizontal .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #C58A2A;
+    opacity: 0.4;
+    margin: 0 15px;
+}
+
+.center-ornament {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-divider-horizontal .diamond {
+    font-size: 0.5rem;
+}
+
+.center-ornament .big {
+    font-size: 0.8rem;
+}
+
+/* Features Row */
+.contact-features-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.feature-item-hz {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.feature-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(197, 138, 42, 0.15);
+    color: #A36F17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item-hz p {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.vertical-separator {
+    width: 1px;
+    height: 40px;
+    background-color: #C58A2A;
+    opacity: 0.25;
+}
+
+.vertical-separator.tall {
+    height: 50px;
+    margin: 0 10px;
+}
+
+/* WhatsApp Row */
+.contact-whatsapp-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.whatsapp-icon-large {
+    background-color: #25D366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-text-block {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.reach-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #A36F17;
+    letter-spacing: 1px;
+}
+
+.reach-number {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #102B54;
+    line-height: 1.1;
+}
+
+.reach-desc {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-title {
+        font-size: 2.2rem;
+    }
+    .contact-features-row {
+        gap: 15px; /* slightly smaller gap to ensure fit */
+    }
+    .feature-item-hz {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left-ornament, .right-ornament {
+        display: none;
+    }
+    .contact-title {
+        font-size: 1.8rem;
+    }
+    .reach-number {
+        font-size: 1.8rem;
+    }
+    
+    /* 2 on top, 1 in center layout for mobile features */
+    .contact-features-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 10px;
+    }
+    .feature-item-hz {
+        flex-direction: row;
+        text-align: left;
+        width: 47%;
+        gap: 8px;
+    }
+    .feature-icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+    .feature-icon-circle span {
+        font-size: 1.2rem;
+    }
+    .feature-item-hz p {
+        font-size: 0.8rem;
+    }
+    .feature-item-hz:last-of-type {
+        width: auto; /* let it center naturally */
+        margin-top: 5px;
+    }
+    .vertical-separator:not(.tall) {
+        display: none;
+    }
+    
+    /* WhatsApp section stacking for mobile */
+    .contact-whatsapp-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .whatsapp-text-block {
+        align-items: center;
+    }
+    .reach-desc {
+        text-align: center;
+    }
+    .vertical-separator.tall {
+        width: 100px;
+        height: 1px;
+        margin: 5px 0;
+    }
+}

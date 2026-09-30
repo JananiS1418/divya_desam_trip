@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap');
+
+/* Reset some basic margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Guarantee no horizontal scroll blowouts */
+    width: 100%;
+}
+
+/* Banner Section Styles */
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: #fdfaf6;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay Text Styling */
+.banner-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    /* Firmly anchored to the far left */
+    transform: translateY(-50%);
+    width: 42%;
+    max-width: 650px;
+    /* Prevent it from stretching into the temples */
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(ellipse at center, rgba(255, 252, 235, 0.8) 0%, rgba(255, 252, 235, 0.4) 50%, transparent 80%);
+    /* Wider, softer glow */
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Subtitle Row */
+.subtitle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.subtitle-row .line {
+    height: 1px;
+    width: 30px;
+    background-color: #a47b41;
+}
+
+.subtitle-row .diamond {
+    color: #a47b41;
+    font-size: 0.6rem;
+}
+
+.subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    color: #0f2b5a;
+    font-weight: 700;
+}
+
+/* Main Title */
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 4.5vw, 4.8rem);
+    line-height: 1.05;
+    color: #7a0910;
+    /* Deeper Crimson */
+    margin: 0;
+    font-weight: 800;
+    /* Extra bold */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9), 0px 5px 15px rgba(0, 0, 0, 0.15);
+    /* Richer pop */
+}
+
+.trip-text {
+    color: #0b1f47;
+    /* Darker Navy */
+}
+
+/* Lotus Flourish */
+.flourish-below-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 15px 0 10px 0;
+}
+
+.flourish-below-title .line {
+    height: 1px;
+    width: 80px;
+    /* Shortened to a neat, fixed width */
+    background-color: #a47b41;
+}
+
+.flourish-below-title .lotus {
+    color: #a47b41;
+    font-size: 1.2rem;
+}
+
+/* Description */
+.description {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    /* Increased font size */
+    color: #0f2b5a;
+    line-height: 1.35;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Features */
+.banner-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Aligns dividers and items */
+    gap: 30px;
+    /* Increased space between features */
+    width: 100%;
+    margin-top: 10px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    /* Suggests interactivity */
+}
+
+.feature-item:hover .feature-icon {
+    transform: translateY(-5px);
+    /* Smooth floating effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    /* Soft drop shadow on hover */
+    background: linear-gradient(135deg, #fff, #f3d4a0);
+    /* Slightly brightens */
+}
+
+.feature-divider {
+    width: 1px;
+    height: 45px;
+    /* Slightly shorter */
+    background: linear-gradient(to bottom, transparent, #a47b41, transparent);
+    /* Fades at ends */
+    opacity: 0.8;
+    margin-bottom: 25px;
+    /* Offset to align with icons rather than text */
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fdf5e6, #f3d4a0);
+    border: 1px solid #730f14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    /* Animation transition */
+}
+
+.feature-icon .material-symbols-outlined {
+    color: #61090c;
+    /* Deep brownish red */
+    font-size: 32px;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #0f2b5a;
+    font-weight: 600;
+    line-height: 1.2;
+    font-variant-numeric: lining-nums;
+    /* Forces numbers to sit flat on the baseline instead of dipping below */
+}
+
+/* Bottom Red Info Bar */
+.banner-bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* Pushes it exactly halfway out of the banner */
+    width: 92%;
+    max-width: 1250px;
+    background: linear-gradient(to right, #730f14, #4a060a, #730f14);
+    border: 2px solid #dca551;
+    border-radius: 20px;
+    /* Rounded pill shape */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 30px;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Inner thin border effect */
+.banner-bottom-bar::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 1px solid rgba(220, 165, 81, 0.4);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+/* Ornate corners using HTML elements */
+.ornate-star {
+    position: absolute;
+    color: #dca551;
+    font-size: 1.5rem;
+}
+
+.left-star {
+    left: 15px;
+}
+
+.right-star {
+    right: 15px;
+}
+
+.bar-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    flex: 1;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bar-section:hover {
+    transform: translateY(-3px);
+    /* Subtle float up on hover */
+}
+
+.bar-section:hover .location {
+    transform: scale(1.15) translateY(-2px);
+    /* Pin pops up */
+    filter: drop-shadow(0 4px 10px rgba(220, 165, 81, 0.8));
+    /* Pin glows */
+}
+
+.bar-section .location {
+    color: #eaddca;
+    font-size: 2.2rem;
+    background: #c39246;
+    /* Base gold */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    /* Bouncy transition */
+}
+
+.bar-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.bar-divider {
+    width: 2px;
+    height: 35px;
+    background: linear-gradient(to bottom, transparent, #dca551, transparent);
+    opacity: 0.7;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1300px) {
+    .banner-overlay-text {
+        top: 42%;
+        /* Slightly higher */
+        width: 45%;
+        left: 2%;
+        transform: translateY(-50%);
+        padding: 10px;
+        /* Less glow padding */
+    }
+
+    .main-title {
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        /* Scaled down more */
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .banner-features {
+        gap: 15px;
+        /* Tighter gap so it fits */
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .feature-icon .material-symbols-outlined {
+        font-size: 24px;
+    }
+
+    .feature-item p {
+        font-size: 0.8rem;
+    }
+
+    .banner-bottom-bar {
+        padding: 10px;
+        width: 96%;
+    }
+
+    .bar-section p {
+        font-size: 0.75rem;
+        /* Smaller text to fit side-by-side */
+    }
+
+    .bar-section .location {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .banner-image {
+        min-height: 580px;
+        object-fit: cover;
+        object-position: 62% center;
+    }
+
+    .banner-overlay-text {
+        top: 30%;
+        /* Moved further upward to use the top blank space */
+        left: 0;
+        right: auto;
+        margin: 0;
+        width: 50%;
+        padding-left: 0;
+        /* Moved completely to the left edge */
+        padding-right: 10px;
+        transform: translateY(-50%);
+        background: transparent;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subtitle-row .subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .subtitle-row .diamond {
+        font-size: 8px;
+    }
+
+    .subtitle-row .line {
+        width: 15px;
+    }
+
+    .main-title {
+        font-size: clamp(38px, 5.5vw, 54px);
+        line-height: 0.95;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .trip-text {
+        font-size: clamp(38px, 5vw, 50px);
+        line-height: 1;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 1.35;
+        margin-bottom: 20px;
+    }
+
+    .banner-features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+        /* Reduced space between items */
+        width: 85%;
+        /* Prevent the row from reaching the right edge */
+        margin: 0 auto;
+        /* Center the grid under the text */
+        align-items: start;
+    }
+
+    .feature-item {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item p {
+        font-size: 12px;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    .feature-icon {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 6px;
+        border-width: 1px;
+    }
+
+    .feature-icon .material-symbols-outlined {
+        font-size: 22px;
+    }
+
+    .feature-divider {
+        display: none;
+    }
+
+    .banner-bottom-bar {
+        position: absolute;
+        bottom: 18px;
+        left: 3%;
+        right: 3%;
+        width: auto;
+        transform: none;
+        border-radius: 20px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 15px 15px;
+        gap: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .bar-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex: 1;
+        /* Fluid columns equivalent to grid 1fr */
+        min-width: 0;
+    }
+
+    .bar-section p {
+        font-size: 12px;
+        text-align: left;
+        line-height: 1.3;
+        word-break: break-word;
+    }
+
+    .bar-section .location {
+        font-size: 1.5rem;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .bar-divider {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, transparent, #dca551, transparent);
+    }
+
+    .ornate-star {
+        display: none !important;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .left-star {
+        left: 10px;
+    }
+
+    .right-star {
+        right: 10px;
+    }
+
+    .desktop-br {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* 1. Position text at the very top of the image */
+    .banner-overlay-text {
+        position: absolute;
+        top: 2%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: none;
+        /* Avoid Safari width calculation bug */
+        width: 100%;
+        max-width: 100%;
+        min-width: 0; /* Override the 400px desktop min-width */
+        padding: 5px;
+        background: transparent;
+        /* No gradient block behind text on mobile */
+    }
+
+    /* 2. Scale text appropriately and ensure readability against bright sky */
+    .subtitle-row .subtitle {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    }
+
+    .subtitle-row .diamond {
+        font-size: 0.5rem;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    }
+
+    .main-title {
+        font-size: 2.3rem;
+        line-height: 1;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+
+    .trip-text {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        font-weight: 700;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    }
+
+    /* 3. Features icons tightly packed side-by-side */
+    .banner-features {
+        flex-wrap: nowrap;
+        gap: 2px;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .feature-item {
+        width: 24%;
+    }
+
+    .feature-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 5px;
+        background: transparent;
+        border: 1px solid #730f14;
+    }
+
+    .feature-icon .material-symbols-outlined {
+        font-size: 22px;
+    }
+
+    .feature-item p {
+        font-size: 0.65rem;
+        line-height: 1.1;
+    }
+
+    .feature-divider {
+        height: 25px;
+        margin-bottom: 15px;
+    }
+
+    /* 4. Bottom bar perfectly sized and floating */
+    .banner-bottom-bar {
+        position: absolute;
+        bottom: 15px;
+        left: 2%;
+        /* Strictly bound to screen */
+        right: 2%;
+        width: auto;
+        /* Fluid width determined by left/right */
+        transform: none;
+        /* Remove transform which can cause horizontal blowout on small screens */
+        border-radius: 12px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 5px;
+        gap: 0;
+    }
+
+    .banner-bottom-bar::before {
+        display: block;
+        border-radius: 9px;
+    }
+
+    .bar-section {
+        flex: 1;
+        /* Allow columns to flex dynamically instead of hardcoded 32% */
+        min-width: 0;
+        /* Critical for preventing flexbox blowout */
+        display: flex;
+        flex-direction: column;
+        /* Pins above text */
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 0 4px;
+        /* Internal padding */
+    }
+
+    .bar-section p {
+        font-size: 0.55rem;
+        /* Scaled down slightly to fit long names without clipping */
+        line-height: 1.35;
+        color: #ffffff;
+        font-weight: 600;
+        text-align: center;
+        word-break: break-word;
+        /* Ensure long temple names wrap safely */
+    }
+
+    .bar-section .location {
+        font-size: 1rem;
+        /* Larger pin */
+        color: #dca551;
+        margin: 0;
+        display: block;
+    }
+
+    .bar-divider {
+        width: 1px;
+        height: 50px;
+        background: linear-gradient(to bottom, transparent, #dca551, transparent);
+    }
+
+    .desktop-br {
+        display: none;
+        /* Hide hardcoded breaks on mobile so text wraps naturally */
+    }
+
+    .ornate-star {
+        display: none !important;
+        /* User explicitly requested to remove stars on mobile */
+    }
+
+    .left-star {
+        left: 8px;
+    }
+
+    .right-star {
+        right: 8px;
+    }
+}
+
+/* Specific fix for very small screens (like 320px) */
+@media (max-width: 380px) {
+    .banner-overlay-text {
+        padding-left: 0;
+        padding-right: 0; 
+    }
+    .main-title {
+        font-size: 2.0rem; /* Scaled down to prevent horizontal overflow */
+    }
+    .trip-text {
+        font-size: 1.9rem;
+    }
+    .banner-features {
+        gap: 1px;
+    }
+    .feature-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .feature-icon .material-symbols-outlined {
+        font-size: 18px;
+    }
+    .feature-item p {
+        font-size: 0.55rem;
+    }
+    .banner-bottom-bar {
+        padding: 10px 2px;
+    }
+    .bar-section p {
+        font-size: 0.5rem; /* Extremely small text to fit columns without breaking layout */
+    }
+    .bar-section .location {
+        font-size: 0.8rem;
+    }
+}
+
+/* Specific fix for 425px (Large Mobile width) */
+@media (min-width: 381px) and (max-width: 767px) {
+    .banner-overlay-text {
+        top: 3%; /* Keep it high up to avoid the temple below */
+    }
+    .main-title {
+        font-size: 2.6rem; /* Restored to a safe size */
+    }
+    .trip-text {
+        font-size: 2.5rem;
+    }
+}

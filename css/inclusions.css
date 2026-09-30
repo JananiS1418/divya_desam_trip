@@ -1,0 +1,224 @@
+/* General Section Setup */
+.inclusions-section {
+    padding: 10px 20px 40px 20px; /* Reduced bottom padding to decrease gap between sections */
+    background-color: #fbf5eb; /* Very soft cream */
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Setup */
+.inclusions-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-icon {
+    color: #c0873a;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.inclusions-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+}
+.inclusions-title .highlight-red {
+    color: #a81c1c; /* Deep Red */
+}
+.inclusions-title .highlight-blue {
+    color: #0c2045; /* Deep Navy Blue */
+}
+
+.inclusions-subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    color: #384e6e;
+    margin: 0 0 15px 0;
+}
+
+.header-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.header-divider .line {
+    width: 60px;
+    height: 1px;
+    background: #c0873a;
+}
+.header-divider .icon {
+    color: #c0873a;
+    font-size: 1.2rem;
+}
+
+/* Grid Layout */
+.inclusions-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1300px; /* Fits exactly 6 cards horizontally nicely */
+    margin: 0 auto;
+}
+
+/* Individual Card */
+.inclusion-card {
+    background: #fff;
+    border: 1px solid #eaddca;
+    border-radius: 12px;
+    width: 100%; /* Let grid handle width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    top: 0;
+}
+
+.inclusion-card:hover {
+    transform: translateY(-10px);
+    border-color: #c0873a;
+    box-shadow: 0 15px 40px rgba(192, 135, 58, 0.15);
+}
+
+/* Hero Area (Image + Icon) */
+.inclusion-hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px; /* Ample space for the overlapping red icon */
+}
+
+/* Temple Window Arch Design for Images */
+.hero-image-wrapper {
+    width: 120px;
+    height: 140px;
+    background: linear-gradient(135deg, #fdf8ef, #eaddca);
+    border-top-left-radius: 60px; /* Perfect arch top */
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 8px; /* Slightly rounded bottom corners */
+    border-bottom-right-radius: 8px;
+    border: 2px solid #dca551; /* Gold border */
+    box-shadow: inset 0 0 0 4px #fff, 0 8px 15px rgba(0,0,0,0.08); /* Premium inner white rim and outer shadow */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.inclusion-card:hover .hero-image-wrapper img {
+    transform: scale(1.15);
+}
+
+/* Disabled SVG Outline */
+.inclusion-hero::before {
+    display: none;
+}
+
+/* The red circular icon overlapping the image */
+.inclusion-icon-wrapper {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
+    background: #730f14; /* Deep thematic red */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+}
+
+.inclusion-card:hover .inclusion-icon-wrapper {
+    transform: translateX(-50%) scale(1.1) rotate(5deg);
+    background: #a81c1c; /* Lighter red on hover */
+    box-shadow: 0 6px 12px rgba(115, 15, 20, 0.3);
+}
+
+.inclusion-icon-wrapper .material-symbols-outlined {
+    font-size: 24px;
+    transition: transform 0.4s ease;
+}
+
+.inclusion-card:hover .inclusion-icon-wrapper .material-symbols-outlined {
+    transform: scale(1.1);
+}
+
+/* Content */
+.inclusion-content {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inclusion-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #0f2b5a; /* Deep Navy */
+    margin: 0 0 8px 0;
+}
+
+.inclusion-content p {
+    font-family: 'Georgia', serif;
+    font-size: 0.85rem;
+    color: #5a6e8b;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Footer Icon */
+.inclusion-footer {
+    color: #c0873a;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 1250px) {
+    .inclusions-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on tablet/small desktop */
+    }
+}
+@media (max-width: 800px) {
+    .inclusions-title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .inclusions-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
+        gap: 10px; /* Slightly smaller gap on mobile so they fit nicely */
+    }
+    .hero-image-wrapper {
+        width: 100px; /* Scale down image arch on mobile so 2 fit side-by-side */
+        height: 120px;
+    }
+    .inclusion-card {
+        padding: 15px 10px; /* Tighter padding */
+    }
+    .inclusion-content h3 {
+        font-size: 1rem;
+    }
+}
