@@ -59,10 +59,10 @@
 /* Grid Layout */
 .inclusions-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     justify-content: center;
-    max-width: 1300px; /* Fits exactly 6 cards horizontally nicely */
+    max-width: 1100px; /* Fits exactly 5 cards horizontally perfectly */
     margin: 0 auto;
 }
 
@@ -107,10 +107,21 @@
     border-bottom-left-radius: 8px; /* Slightly rounded bottom corners */
     border-bottom-right-radius: 8px;
     border: 2px solid #dca551; /* Gold border */
-    box-shadow: inset 0 0 0 4px #fff, 0 8px 15px rgba(0,0,0,0.08); /* Premium inner white rim and outer shadow */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08); /* Outer shadow */
     overflow: hidden;
     position: relative;
     z-index: 1;
+}
+
+/* Pseudo-element to render the inset white rim ON TOP of the image */
+.hero-image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 4px #fff;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .hero-image-wrapper img {
@@ -198,7 +209,16 @@
 /* Responsive Layout */
 @media (max-width: 1250px) {
     .inclusions-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 items per row on tablet/small desktop */
+        grid-template-columns: repeat(6, 1fr); /* 6 column grid to allow centering */
+    }
+    .inclusion-card {
+        grid-column: span 2; /* First 3 items take 2 cols each */
+    }
+    .inclusion-card:nth-child(4) {
+        grid-column: 2 / span 2; /* Starts at col 2 to center the pair */
+    }
+    .inclusion-card:nth-child(5) {
+        grid-column: 4 / span 2; /* Starts at col 4 */
     }
 }
 @media (max-width: 800px) {
@@ -210,6 +230,17 @@
     .inclusions-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
         gap: 10px; /* Slightly smaller gap on mobile so they fit nicely */
+    }
+    .inclusion-card {
+        grid-column: span 1; /* Reset from tablet */
+    }
+    .inclusion-card:nth-child(4) {
+        grid-column: span 1; /* Reset from tablet */
+    }
+    .inclusion-card:nth-child(5) {
+        grid-column: 1 / -1; /* Make the 5th odd card span the whole row */
+        justify-self: center; /* Center it */
+        width: calc(50% - 5px); /* Make it the same size as the other cards */
     }
     .hero-image-wrapper {
         width: 100px; /* Scale down image arch on mobile so 2 fit side-by-side */

@@ -31,7 +31,7 @@ body {
 /* Overlay Text Styling */
 .banner-overlay-text {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 2%;
     /* Firmly anchored to the far left */
     transform: translateY(-50%);
@@ -81,8 +81,8 @@ body {
 /* Main Title */
 .main-title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 4.5vw, 4.8rem);
-    line-height: 1.05;
+    font-size: clamp(2.5rem, 3.8vw, 4.2rem);
+    line-height: 1.1;
     color: #7a0910;
     /* Deeper Crimson */
     margin: 0;
@@ -92,7 +92,13 @@ body {
     /* Richer pop */
 }
 
-.trip-text {
+.sacred-text {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
+    font-weight: 500;
+    letter-spacing: 1px;
     color: #0b1f47;
     /* Darker Navy */
 }
@@ -396,9 +402,10 @@ body {
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
 
-    .trip-text {
-        font-size: clamp(38px, 5vw, 50px);
-        line-height: 1;
+    .sacred-text {
+        font-size: clamp(18px, 2.5vw, 24px);
+        line-height: 1.2;
+        margin-top: 5px;
     }
 
     .description {
@@ -551,8 +558,9 @@ body {
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
     }
 
-    .trip-text {
-        font-size: 2.2rem;
+    .sacred-text {
+        font-size: 1.2rem;
+        margin-top: 5px;
     }
 
     .description {
@@ -692,8 +700,9 @@ body {
         /* Scaled down to prevent horizontal overflow */
     }
 
-    .trip-text {
-        font-size: 1.9rem;
+    .sacred-text {
+        font-size: 1.0rem;
+        margin-top: 3px;
     }
 
     .banner-features {
@@ -739,7 +748,8 @@ body {
         /* Restored to a safe size */
     }
 
-    .trip-text {
-        font-size: 2.5rem;
+    .sacred-text {
+        font-size: 1.3rem;
+        margin-top: 5px;
     }
 }
